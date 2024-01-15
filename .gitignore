@@ -1,0 +1,14 @@
+wp-admin/
+template/
+wp-includes/
+wp-content/backups-dup-lite
+wp-content/languages
+wp-content/plugins
+wp-content/upgrade
+wp-content/uploads
+wp-*.php
+xmlrpc.php
+# index.php
+.htaccess
+*.html
+*.txt
