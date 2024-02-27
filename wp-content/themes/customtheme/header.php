@@ -28,8 +28,8 @@ if (!defined('ABSPATH')) {
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
     <?php //wp_site_icon(); ?>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-    <link rel="stylesheet" href="<?php echo get_site_url() ?>/template/css/style.css">
-    <link rel="stylesheet" href="<?php echo get_site_url() ?>/template/css/backdoor.css">
+    <!-- <link rel="stylesheet" href="<?php echo get_site_url() ?>/template/css/style.css">
+    <link rel="stylesheet" href="<?php echo get_site_url() ?>/template/css/backdoor.css"> -->
     <?php wp_head(); ?>
 </head>
 <?php

@@ -5,6 +5,7 @@ class Setup_Theme {
     {
         add_action('init', [$this, '_back_admin']);
         add_action( 'after_setup_theme', [ $this, 'after_setup_theme' ] );
+        add_action( 'customize_register', [ $this, 'mytheme_customize_register'] );
 
         add_filter( 'wp_title', [ $this, 'rw_title' ], 10, 3);
         add_filter( 'the_generator', [ $this, 'custom_rss_version' ] );
@@ -264,4 +265,8 @@ class Setup_Theme {
         return $items;
     }
 
+    public function mytheme_customize_register( $wp_customize )
+    {
+        $wp_customize->remove_section('custom_css');
+    }
 }
