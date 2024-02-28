@@ -184,7 +184,12 @@ input[type=week] {
 }
 
 button.remove_row_button.button.button-danger:hover {
+    color: red;
     border: red solid 1px;
+}
+
+button.remove_row_button.button.button-danger{
+    margin-right: 10px;
 }
 
 .widget-items .field-group-contents .box-field-item.render-item {

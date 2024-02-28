@@ -3,7 +3,7 @@
 /**
  * The template for displaying index.
  *
- * @package Monamedia
+ * @package
  */
 
 if (!defined('ABSPATH')) {

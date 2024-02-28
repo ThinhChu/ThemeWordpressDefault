@@ -31,9 +31,9 @@ class widget_field_select {
         }
 
         if ( isset ( $field_args['class'] ) ) {
-            $class = 'class="mona-custom-widget ref-field-select '.esc_attr( $field_args['class'] ).'"';
+            $class = 'class="custom-widget ref-field-select '.esc_attr( $field_args['class'] ).'"';
         } else {
-            $class = 'class="mona-custom-widget ref-field-select"';
+            $class = 'class="custom-widget ref-field-select"';
         }
 
         if ( isset ( $field_args['name'] ) ) {

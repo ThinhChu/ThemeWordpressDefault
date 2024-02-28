@@ -16,9 +16,9 @@ class CustomCore extends Setup_Theme {
             // 'app/controllers' => [
             //     'method'   => '',
             //     'autoload' => array(
-            //         // 'mona-class-notice.php',
-            //         // 'class-mona-posts.php',
-            //         // 'class-mona-singlePost.php'
+            //         // 'class-notice.php',
+            //         // 'class-posts.php',
+            //         // 'class-singlePost.php'
             //     ),
             // ],
             // 'app/ajax' => [

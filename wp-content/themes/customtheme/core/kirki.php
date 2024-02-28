@@ -26,7 +26,7 @@ if (class_exists('Kirki')) {
     //     'title' => esc_attr__('Header', 'custom'),
     //     'priority' => $priority++,
     //     'capability' => 'edit_theme_options',
-    //     // 'panel'       => 'panel_id',
+    //     'panel'       => 'panel_id',
     // ));
 
     // Kirki::add_section('footer', array(
@@ -71,49 +71,49 @@ if (class_exists('Kirki')) {
     // ));
 
     // Social
-    Kirki::add_field('custom_setting', array(
-        'type' => 'repeater',
-        'settings' => 'repeater_setting_css',
-		'label'    => esc_html__( 'Repeater Control', 'custom'),
-		'section'  => 'social',
-		'priority' => $priority++,
-		'default'  => '',
-		'fields'   => [
-            'link_icon'   => [
-				'type'        => 'image',
-				'label'       => esc_html__( 'Icon', 'custom' ),
-				'description' => esc_html__( 'Description', 'custom' ),
-				'default'     => '',
-			],
-			'link_text'   => [
-				'type'        => 'text',
-				'label'       => esc_html__( 'Link Text', 'custom' ),
-				'description' => esc_html__( 'Description', 'custom' ),
-				'default'     => '',
-			],
-			'link_url'    => [
-				'type'        => 'text',
-				'label'       => esc_html__( 'Link URL', 'custom' ),
-				'description' => esc_html__( 'Description', 'custom' ),
-				'default'     => '',
-			],
-			// 'link_target' => [
-			// 	'type'        => 'select',
-			// 	'label'       => esc_html__( 'Link Target', 'kirki' ),
-			// 	'description' => esc_html__( 'Description', 'kirki' ),
-			// 	'default'     => '_self',
-			// 	'choices'     => [
-			// 		'_blank' => esc_html__( 'New Window', 'kirki' ),
-			// 		'_self'  => esc_html__( 'Same Frame', 'kirki' ),
-			// 	],
-			// ],
-			// 'checkbox'    => [
-			// 	'type'    => 'checkbox',
-			// 	'label'   => esc_html__( 'Checkbox', 'kirki' ),
-			// 	'default' => false,
-			// ],
-		],
-    ));
+    // Kirki::add_field('custom_setting', array(
+    //     'type' => 'repeater',
+    //     'settings' => 'repeater_setting_css',
+	// 	'label'    => esc_html__( 'Repeater Control', 'custom'),
+	// 	'section'  => 'social',
+	// 	'priority' => $priority++,
+	// 	'default'  => '',
+	// 	'fields'   => [
+    //         'link_icon'   => [
+	// 			'type'        => 'image',
+	// 			'label'       => esc_html__( 'Icon', 'custom' ),
+	// 			'description' => esc_html__( 'Description', 'custom' ),
+	// 			'default'     => '',
+	// 		],
+	// 		'link_text'   => [
+	// 			'type'        => 'text',
+	// 			'label'       => esc_html__( 'Link Text', 'custom' ),
+	// 			'description' => esc_html__( 'Description', 'custom' ),
+	// 			'default'     => '',
+	// 		],
+	// 		'link_url'    => [
+	// 			'type'        => 'text',
+	// 			'label'       => esc_html__( 'Link URL', 'custom' ),
+	// 			'description' => esc_html__( 'Description', 'custom' ),
+	// 			'default'     => '',
+	// 		],
+	// 		// 'link_target' => [
+	// 		// 	'type'        => 'select',
+	// 		// 	'label'       => esc_html__( 'Link Target', 'kirki' ),
+	// 		// 	'description' => esc_html__( 'Description', 'kirki' ),
+	// 		// 	'default'     => '_self',
+	// 		// 	'choices'     => [
+	// 		// 		'_blank' => esc_html__( 'New Window', 'kirki' ),
+	// 		// 		'_self'  => esc_html__( 'Same Frame', 'kirki' ),
+	// 		// 	],
+	// 		// ],
+	// 		// 'checkbox'    => [
+	// 		// 	'type'    => 'checkbox',
+	// 		// 	'label'   => esc_html__( 'Checkbox', 'kirki' ),
+	// 		// 	'default' => false,
+	// 		// ],
+	// 	],
+    // ));
 }
 
 if ( ! function_exists ( 'custom_option' ) ) {

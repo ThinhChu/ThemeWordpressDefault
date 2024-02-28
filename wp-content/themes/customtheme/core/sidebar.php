@@ -4,8 +4,8 @@
         register_sidebar( 
             [
                 'id'            => 'footer_column_1',
-                'name'          => __( 'Footer Column 1', 'custom-admin' ),
-                'description'   => __( 'Nội dung widget.', 'custom-admin' ),
+                'name'          => __( 'Footer Column 1', 'custom' ),
+                'description'   => __( 'Nội dung widget.', 'custom' ),
                 'before_widget' => '',
                 'after_widget'  => '',
                 'before_title'  => '<div class="footer-title">',

@@ -71,15 +71,15 @@ class custom_widget extends custom_callback {
                 );
                 break;
 
-            // case 'gallery':
+            case 'gallery':
 
-            //     static::widget_field( 'class.field_Gallery',
-            //         [
-            //             'func_class' => 'Render_Field_Gallery',
-            //             'field_args' => $field_args,
-            //         ]
-            //     );
-            //     break;
+                static::widget_field( 'gallery.field',
+                    [
+                        'func_class' => 'widget_field_gallery',
+                        'field_args' => $field_args,
+                    ]
+                );
+                break;
 
             // case 'group':
 
@@ -91,15 +91,15 @@ class custom_widget extends custom_callback {
             //     );
             //     break;
 
-            // case 'repeater':
+            case 'repeater':
 
-                // static::widget_field( 'class.field_Repeater',
-                //     [
-                //         'func_class' => 'Render_Field_Repeater',
-                //         'field_args' => $field_args,
-                //     ]
-                // );
-                // break;
+                static::widget_field( 'repeater.field',
+                    [
+                        'func_class' => 'widget_field_repeater',
+                        'field_args' => $field_args,
+                    ]
+                );
+                break;
 
             default:
 

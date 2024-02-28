@@ -80,9 +80,9 @@ class widget_field_image {
         $output .= $image_src;
         $output .= '</div>';
         $output .= '<div class="box-image-button">';
-        $output .= '<button class="upload_image_button button button-primary">'.__( 'Chọn ảnh', 'monamedia' ).'</button>';
+        $output .= '<button class="upload_image_button button button-primary">'.__( 'Chọn ảnh', 'custom' ).'</button>';
         if ( ! empty ( $field_args['value'] ) ) {
-            $output .= '<button class="remove_image_button button button-danger">'.__( 'Xóa ảnh', 'monamedia' ).'</button>';
+            $output .= '<button class="remove_image_button button button-danger">'.__( 'Xóa ảnh', 'custom' ).'</button>';
         }
         $output .= '</div>';
         $output .= '</div>';
@@ -108,21 +108,18 @@ class widget_field_image {
             }
 
             // Gọi hàm
-            
+            custom_widget::create_field(
                 [
                     'type'        => 'text',
                     'name'        => $this->get_field_name( 'text' ),
                     'id'          => $this->get_field_id( 'text' ),
                     'value'       => $text,
                     'title'       => __( 'Text', 'custom' ),
-                    'placeholder'  => __( 'Chọn hình ảnh', 'monamedia' ),
+                    'placeholder'  => __( 'Chọn hình ảnh', 'custom' ),
                     'width'        => 390,
                     'docs'        => false,
                 ]
-            
-
-            // Cập nhật
-            
+            );
             </code>
             </pre>
         <?php

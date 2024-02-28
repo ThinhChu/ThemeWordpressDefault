@@ -125,18 +125,18 @@ class custom_callback {
             //     'label' => '[radio]',
             //     'description' => '',
             // ],
-            // 'gallery'  => [
-            //     'label' => '[gallery]',
-            //     'description' => '',
-            // ],
+            'gallery'  => [
+                'label' => '[gallery]',
+                'description' => '',
+            ],
             // 'group'    => [
             //     'label' => '[group]',
             //     'description' => '',
             // ],
-            // 'repeater' => [
-            //     'label' => '[repeater]',
-            //     'description' => '',
-            // ],
+            'repeater' => [
+                'label' => '[repeater]',
+                'description' => '',
+            ],
         ];
 
         return (array) $message;

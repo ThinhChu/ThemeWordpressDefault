@@ -3,7 +3,7 @@
 /**
  * The template for displaying header.
  *
- * @package Monamedia
+ * @package
  */
 
 if (!defined('ABSPATH')) {

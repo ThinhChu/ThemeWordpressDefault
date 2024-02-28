@@ -13,7 +13,7 @@
     }
     add_action( 'wp_enqueue_scripts', 'custome_add_styles_scripts' );
 
-    function mona_add_module_to_my_script( $tag, $handle, $src ) {
+    function add_module_to_my_script( $tag, $handle, $src ) {
 
         if ( 'custom-admin-js' === $handle or 'custom-js' === $handle) {
     
@@ -23,4 +23,4 @@
     
         return $tag;
     }
-    add_filter( 'script_loader_tag', 'mona_add_module_to_my_script', 10, 3 );
+    add_filter( 'script_loader_tag', 'add_module_to_my_script', 10, 3 );

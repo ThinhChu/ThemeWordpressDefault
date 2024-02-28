@@ -21,6 +21,8 @@
             $instance['thumbnail'] = $new_instance['thumbnail'];
             $instance['select'] = $new_instance['select'];
             $instance['checkbox'] = $new_instance['checkbox'];
+            $instance['repeater'] = $new_instance['repeater'];
+            $instance['gallery'] = $new_instance['gallery'];
             return $instance;
         }
 
@@ -32,12 +34,16 @@
                 'thumbnail' => '',
                 'select' => '',
                 'checkbox' => '',
+                'repeater' => '',
+                'gallery' => '',
             ));
             $title = $instance['title'];
             $content = $instance['content'];
             $thumbnail = $instance['thumbnail'];
             $select = $instance['select'];
             $checkbox = $instance['checkbox'];
+            $repeater = $instance['repeater'];
+            $gallery = $instance['gallery'];
 
             if (class_exists('custom_widget')) { 
                 custom_widget::create_field([
@@ -101,6 +107,37 @@
                     'column'       => 4, // max 5
                     'docs'         => false,
                 ]);
+
+                custom_widget::create_field(
+                    [
+                        'type'   => 'repeater',
+                        'name'   => $this->get_field_name( 'repeater' ),
+                        'id'     => $this->get_field_id( 'repeater' ),
+                        'value'  => $repeater,
+                        'title'  => __( 'Repeater', 'custom'),
+                        'fields' => [
+                            'item_text' => [
+                                'type'        => 'text',
+                                'title'       => __( 'Text', 'custom' ),
+                                'placeholder' => __( 'Nhập nội dung văn bản', 'custom'),
+                            ]
+                        ],
+                        'docs'   => false,
+                    ]
+                );
+
+                custom_widget::create_field(
+                    [
+                        'type'         => 'gallery',
+                        'name'         => $this->get_field_name( 'gallery' ),
+                        'id'           => $this->get_field_id( 'gallery' ),
+                        'value'        => $gallery,
+                        'title'        => __( 'Gallery', 'custom' ),
+                        'placeholder'  => __( 'Chọn hình ảnh', 'custom'),
+                        'width'        => 50,
+                        'docs'         => false,
+                    ]
+                );
             }
         }
     }
