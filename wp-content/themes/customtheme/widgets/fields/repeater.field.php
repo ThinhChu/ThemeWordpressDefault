@@ -159,12 +159,22 @@ class widget_field_repeater {
                     $class = 'class="custom-widget ref-field-image"';
                 }
 
-                $image_src = '';
+                if ( isset( $field_args['value'] ) && ! empty ( $field_args['value'] ) ) {
+                    $image_src = wp_get_attachment_image($field_args['value'], 'full');
+                } else {
+                    $image_src = '';
+                }
 
                 if ( isset( $item['width'] ) && ! empty ( $item['width'] ) ) {
                     $width = esc_attr( $item['width'] );
                 } else {
                     $width = '390';
+                }
+
+                if ( isset( $field_args['value'] ) ) {
+                    $value = 'value="'.esc_attr( $field_args['value'] ).'"';
+                } else {
+                    $value = 'value=""';
                 }
 
                 $output .= '<div class="box-field-item render-item box-field-image">';
@@ -174,9 +184,11 @@ class widget_field_repeater {
                 $output .= '</label>';
                 $output .= '</div>';
                 $output .= '<div class="box-field-content">';
-                $output .= '<input type="hidden" '.$class.' '.$id.' '.$name.' '.$placeholder.'/>';
-                $output .= '<img style="width:auto; height:auto; max-width:'.$width.'px;" src="'.$image_src.'" class="w-image-review"/>';
-                $output .= '<div class="box-image-button">';
+                $output .= '<div class="box-field-content">';
+                $output .= '<input type="hidden" class="img-val" '.$class.' '.$id.' '.$name.' value="'.$value.'" '.$placeholder.' />';
+                $output .= '<div class="w-image-review">';
+                $output .= $image_src;
+                $output .= '</div>';
                 $output .= '<button class="upload_image_button button button-primary">'.__( 'Chọn ảnh', 'custom' ).'</button>';
                 if ( ! empty ( $field_args['value'][$key] ) ) {
                     $output .= '<button class="remove_image_button button button-danger">'.__( 'Xóa ảnh', 'custom' ).'</button>';
@@ -506,15 +518,15 @@ class widget_field_repeater {
                             }
 
                             if ( ! empty ( $field_args['value'][$key][$k] ) ) {
-                                $image_src = esc_url( $field_args['value'][$key][$k] );
-                            } else {
-                                $image_src = '';
-                            }
-
-                            if ( ! empty ( $field_args['value'][$key][$k] ) ) {
-                                $value = 'value="'.esc_url( $field_args['value'][$key][$k] ).'"';
+                                $value = $field_args['value'][$key][$k];
                             } else {
                                 $value = '';
+                            }
+                            
+                            if ( $value && ! empty ( $value) ) {
+                                $image_src = wp_get_attachment_image($value, 'thumbnail');
+                            } else {
+                                $image_src = '';
                             }
 
                             if ( isset( $field_args['fields'][$k]['width'] ) && ! empty ( $field_args['fields'][$k]['width'] ) ) {
@@ -530,8 +542,10 @@ class widget_field_repeater {
                             $output .= '</label>';
                             $output .= '</div>';
                             $output .= '<div class="box-field-content">';
-                            $output .= '<input type="hidden" '.$class.' '.$id.' '.$name.' '.$value.' '.$placeholder.'/>';
-                            $output .= '<img style="width:auto; height:auto; max-width:'.$width.'px;" src="'.$image_src.'" class="w-image-review"/>';
+                            $output .= '<input type="hidden" class="img-val" '.$class.' '.$id.' '.$name.' value="'.$value.'" '.$placeholder.' />';
+                            $output .= '<div class="w-image-review">';
+                            $output .= $image_src;
+                            $output .= '</div>';
                             $output .= '<div class="box-image-button">';
                             $output .= '<button class="upload_image_button button button-primary">'.__( 'Chọn ảnh', 'custom' ).'</button>';
                             if ( ! empty ( $field_args['value'][$key][$k] ) ) {
