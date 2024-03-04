@@ -47,6 +47,7 @@ class CustomCore extends Setup_Theme {
                 'method'   => '',
                 'autoload' => array(
                     'repeater.php',
+                    'contact.php',
                 ),
             ],
             
