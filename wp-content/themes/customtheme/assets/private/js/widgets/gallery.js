@@ -55,8 +55,12 @@ export default function Gallery () {
         $(document).on('click', '.act-remove-image', function(e) {
             e.preventDefault(e);
             var $button = $(this);
-            $action = $button.closest('.box-field-gallery .gallery-column').remove();
-            $('input[name="savewidget"]').prop('disabled', false);
+            if (confirm('Delete image ?')) {
+                $button.closest('.box-field-gallery .gallery-column').remove();
+                $('input[name="savewidget"]').prop('disabled', false);
+            }else{
+                return false;
+            }
         });
     });
 }

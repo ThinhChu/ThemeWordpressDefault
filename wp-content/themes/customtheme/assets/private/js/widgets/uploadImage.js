@@ -15,8 +15,8 @@ export default function Upload () {
             }).open().on('select', function () {
                 // We set multiple to false so only get one image from the uploader
                 var attachment = file_frame.state().get('selection').first().toJSON();
-                $this.closest('.widget-items').find('.w-image-review').html('<img src="' + attachment.url + '">');
-                $this.closest('.widget-items').find('.img-val').val(attachment.id);
+                $this.closest('.box-field-image').find('.w-image-review').html('<img src="' + attachment.url + '">');
+                $this.closest('.box-field-image').find('.img-val').val(attachment.id);
                 $('input[name="savewidget"]').prop('disabled', false);
             });
             // Finally, open the modal
@@ -27,8 +27,8 @@ export default function Upload () {
             event.preventDefault();
             if (confirm('Delete image ?')) {
                 // Create the media frame.
-                $this.closest('.widget-items').find('.w-image-review').html('');
-                $this.closest('.widget-items').find('.img-val').val('');
+                $this.closest('.box-field-image').find('.w-image-review').html('');
+                $this.closest('.box-field-image').find('.img-val').val('');
                 $('input[name="savewidget"]').prop('disabled', false);
             }else{
                 return false;
