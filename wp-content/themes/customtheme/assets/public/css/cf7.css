@@ -28,3 +28,19 @@ span.wpcf7-spinner {
 .wpcf7 form.sent .wpcf7-response-output {
     color: #46b450;
 }
+
+footer .wpcf7-not-valid-tip {
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.wpcf7-not-valid-tip {
+    color: #dc3232;
+    font-size: 0.8rem;
+    font-weight: normal;
+    display: block;
+    position: absolute;
+    bottom: -0.1rem;
+    left: 4.1rem;
+}
