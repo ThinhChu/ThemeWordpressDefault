@@ -1,4 +1,10 @@
-<ul class="socials list">
+<ul class="socials list p-t-16">
+    <li class="share-it">
+        <a href="<?php echo urlencode(get_the_permalink()); ?>" class="copylink item facebook">
+            <i class="far fa-link"></i>
+        </a>
+        <span class="coppied">Đã sao chép</span>
+    </li>
     <li class="share-it">
         <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_the_permalink()); ?>&t=<?php the_title(); ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=500');
                 return false;" class="item facebook">
@@ -25,7 +31,7 @@
         </li>   
         <li class="share-it">
             <a href="viber://forward?text=<?php echo urlencode(get_the_permalink()); ?>" class="item bg-icon" >
-                <i class="fa viber-sms"></i>
+                <i class="fab fa-viber"></i>
             </a>
         </li> 
         <li class="share-it">
@@ -38,20 +44,20 @@
                 <i class="fa sms-sms"></i>
             </a>
         </li>-->
-         <li class="share-it">
+         <!-- <li class="share-it">
              <a target="_blank" href="https://sp.zalo.me/share_inline?d=<?php echo base64_encode(json_encode(array('url' => urlencode(get_the_permalink())))); ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=500'); return false;" class="item bg-icon"><i class="fa zalo-sms"></i></a>
-        </li>
+        </li> -->
         <?php
     }else{
         ?>
         <li class="share-it">
             <a href="viber://forward?text=<?php echo urlencode(get_the_permalink()); ?>" class="item bg-icon" >
-                <i class="fa viber-sms"></i>
+                <i class="fa fa-viber"></i>
             </a>
         </li> 
-          <li class="share-it">
+          <!-- <li class="share-it">
               <a href="https://sp.zalo.me/share_inline?d=<?php echo base64_encode(json_encode(array('url' => urlencode(get_the_permalink())))); ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=500'); return false;" class="item bg-icon"><i class="fa zalo-sms"></i></a>
-        </li>  
+        </li>   -->
         <?php
     }
     ?>

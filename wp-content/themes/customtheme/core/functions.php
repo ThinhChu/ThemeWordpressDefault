@@ -50,6 +50,13 @@
 
     }
 
+    /**
+     * Undocumented function
+     * Trả về format href theo type được nhận
+     * @param [type] phone, email, normal
+     * @param [content] $content
+     * @return void
+     */
     function get_href_by_type_social($type, $content) {
         if ($type == 'phone') {
             $href = replace_tel($content);
@@ -60,3 +67,11 @@
         }
         return $href;
     }
+
+    /**
+     * Undocumented function
+     * Trả về format author name
+     * @param [postID] $postID
+     * @return void
+     */
+    // the_author_meta('user_nicename', $post->post_author)

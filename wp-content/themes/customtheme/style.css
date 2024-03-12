@@ -337,3 +337,41 @@ img {
     background: #b91d1c;
     color: #fff;
 }
+
+ul.socials.list {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+ul.socials.list .share-it {
+    position: relative;
+}
+
+ul.socials.list .share-it a{
+    font-size: 1.2rem;
+    color: black;
+    transition: all 0.4s;
+}
+
+ul.socials.list .share-it a:hover{
+    color: #717fe0;
+}
+
+.coppied {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.coppied.active {
+    transition: all 0.4s;
+    visibility: visible;
+    opacity: 1;
+}

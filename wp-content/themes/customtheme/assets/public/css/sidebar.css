@@ -1,0 +1,39 @@
+/* List UL LI sidebar */
+.side-menu ul li {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.side-menu ul li a{
+    display: block;
+    padding:0.5rem 0.3rem;
+    color: #888;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    line-height: 1.666667;
+}
+
+.side-menu ul li:hover, .side-menu ul li:hover a {
+    color: #717fe0;
+}
+
+/* Tag Cloud */
+.tagcloud .tag-cloud-link {
+    border: 1px solid #ccc;
+    border-radius: 1.5rem;
+    padding: 0.5rem 0.8rem;
+    color: #888;
+    font-size: 0.8rem !important;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.tagcloud .tag-cloud-link:hover {
+    border: 1px solid #717fe0;
+    color: #717fe0;
+}
